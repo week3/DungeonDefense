@@ -47,8 +47,17 @@ TagManager:
   - name: Floor
     uniqueID: 1881786731
     locked: 0
+  - name: Entity_Underlay
+    uniqueID: 1524855029
+    locked: 0
   - name: Entitys
     uniqueID: 2438603893
+    locked: 0
+  - name: UI
+    uniqueID: 4212365541
+    locked: 0
+  - name: UI_Top
+    uniqueID: 2262513395
     locked: 0
   - name: Walls
     uniqueID: 3383742663
