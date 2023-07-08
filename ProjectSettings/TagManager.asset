@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - room
+  - adventurer
+  - monster
   layers:
   - Default
   - TransparentFX

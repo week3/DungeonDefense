@@ -62,6 +62,9 @@ TextureImporter:
   - first:
       213: -8703461067873056785
     second: wall_15
+  - first:
+      213: -1518772349635553937
+    second: gremlin_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -558,7 +561,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,6 +569,27 @@ TextureImporter:
       bones: []
       spriteID: fe70cfc8548173780800000000000000
       internalID: -8703461067873056785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gremlin_1
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 288
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f659945489c3ceae0800000000000000
+      internalID: -1518772349635553937
       vertices: []
       indices: 
       edges: []
