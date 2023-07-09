@@ -14,6 +14,8 @@ public class Enemy_Movement : MonoBehaviour
     public bool showRange = true;
     public float attackDelay = 2f; //Seconds between attacks
     public float damage = 0.5f;
+
+    private float debounceRangeSquared; //90% of attack range. Where the enemy will stop
     private float nextAttackTime=0f; //minimum clock time till next attack
 
     public Transform rangeOverlay;
@@ -27,7 +29,9 @@ public class Enemy_Movement : MonoBehaviour
         adventurers = GameObject.FindGameObjectsWithTag(target_tag);
         rb2d = GetComponent<Rigidbody2D>();
         rangeSquared=range*range;
+        debounceRangeSquared=square(range*0.9f);
         setRangeOverlay();
+
     }
 
     private void FixedUpdate() 
@@ -65,10 +69,23 @@ public class Enemy_Movement : MonoBehaviour
         {
             Vector3 direction = target.transform.position - transform.position;
             direction.z=0;
-            direction.Normalize();
-            direction = direction*movementSpeed;
-            rb2d.velocity = new Vector2(direction.x, direction.y);
+            if(direction.sqrMagnitude>debounceRangeSquared)
+            {
+                direction.Normalize();
+                direction = direction*movementSpeed;
+                rb2d.velocity = new Vector2(direction.x, direction.y);
+            }
+            else
+            { 
+                Debug.Log("In range");
+                rb2d.velocity = new Vector2(0,0);
+            }
         }
+    }
+
+    private float square(float num)
+    {
+        return num*num;
     }
 
     private void setRangeOverlay()
